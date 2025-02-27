@@ -1,110 +1,95 @@
-Real-Time Chat Application
+# Real-Time Chat Application
 
-Overview
+---
 
-This is a real-time chat application built with Spring Boot and WebSockets. It allows users to send and receive messages instantly using STOMP over WebSockets.
+## Overview
+This project is a real-time chat application built using Spring Boot and WebSockets. It enables users to send and receive messages instantly with a responsive frontend.
 
-Features
+---
 
-Real-time messaging using WebSockets
+## Features
+- Real-time messaging using WebSockets
+- STOMP protocol for message handling
+- Interactive UI with Bootstrap
+- Simple and clean architecture
 
-STOMP protocol for message handling
+---
 
-Bootstrap UI for a simple and responsive chat interface
+## Technologies Used
+### Backend (Server-Side)
+- Spring Boot
+- Spring WebSocket
+- Spring Messaging (STOMP Protocol)
+- Thymeleaf
 
-Spring Boot backend for message processing
+### Frontend (Client-Side)
+- Thymeleaf
+- JavaScript (ES6)
+- SockJS
+- STOMP.js
+- HTML/CSS
+- Bootstrap
 
-SockJS fallback for unsupported browsers
+---
 
-Technologies Used
+## Setup Instructions
+1. Clone the repository:
+   ```sh
+   git clone <repository-url>
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd chat_app
+   ```
+3. Build and run the Spring Boot application:
+   ```sh
+   mvn spring-boot:run
+   ```
+4. Open the chat application in your browser at:
+   ```sh
+   http://localhost:8080/chat
+   ```
 
-Java (Spring Boot)
+---
 
-WebSockets & STOMP
+## API Endpoints
+| Method | Endpoint          | Description                 |
+|--------|------------------|-----------------------------|
+| GET    | /chat            | Serves the chat UI          |
+| POST   | /app/sendMessage | Sends a message via WebSockets |
 
-SockJS & Stomp.js
+---
 
-Bootstrap 5 (for UI styling)
-
-HTML, JavaScript
-
-Installation & Setup
-
-1. Clone the repository
-
-git clone <repo-url>
-cd chat_app
-
-2. Run the Spring Boot application
-
-Ensure you have Java 17+ and Maven installed.
-
-mvn spring-boot:run
-
-This starts the backend server at http://localhost:8080.
-
-3. Open the Chat UI
-
-Open the following URL in your browser:
-
-http://localhost:8080/chat
-
-How It Works
-
-When the user opens the chat page, a WebSocket connection is established.
-
-Messages sent are published to the /app/sendMessage endpoint.
-
-The backend broadcasts messages to all subscribed clients on /topic/messages.
-
-Messages appear instantly for all connected users.
-
-API Endpoints
-
-Method
-
-Endpoint
-
-Description
-
-GET
-
-/chat
-
-Serves the chat UI
-
-POST
-
-/app/sendMessage
-
-Sends a message via WebSockets
-
-Project Structure
-
+## Project Structure
+```
 chat_app/
 │── src/main/java/com/chat/chat_app/
-│   ├── Entity/
+│   ├── entity/
 │   │   └── ChatMessage.java
-│   ├── Controller/
+│   ├── controller/
 │   │   └── ChatController.java
-│   ├── Config/
+│   ├── config/
 │   │   └── WebSocketConfig.java
 │── src/main/resources/
-│   ├── static/chat.html
+│   ├── static/
+│   │   └── chat.html
 │   ├── application.properties
+```
 
-Known Issues & Fixes
+---
 
-If you encounter WebSocket not connecting:
+## Usage
+1. Enter your name in the sender input field.
+2. Type a message and click the "Send" button.
+3. The message is broadcasted in real-time to all connected users.
 
-Check the browser console (F12 → Console Tab) for errors.
+---
 
-Ensure the backend is running (mvn spring-boot:run).
+## Contributing
+Feel free to fork the repository and submit pull requests.
 
-Try refreshing the page (Ctrl + Shift + R).
+---
 
-License
+## Author
+**Anjali Singhai**
 
-This project is open-source and free to use under the MIT License.
-
-Developed by Anjali Singhai 🚀

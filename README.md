@@ -1,11 +1,11 @@
 # Real-Time Chat Application
 
----
+
 
 ## Overview
 This project is a real-time chat application built using Spring Boot and WebSockets. It enables users to send and receive messages instantly with a responsive frontend.
 
----
+
 
 ## Features
 - Real-time messaging using WebSockets
@@ -13,7 +13,7 @@ This project is a real-time chat application built using Spring Boot and WebSock
 - Interactive UI with Bootstrap
 - Simple and clean architecture
 
----
+
 
 ## Technologies Used
 ### Backend (Server-Side)
@@ -30,7 +30,7 @@ This project is a real-time chat application built using Spring Boot and WebSock
 - HTML/CSS
 - Bootstrap
 
----
+
 
 ## Setup Instructions
 1. Clone the repository:
@@ -50,7 +50,7 @@ This project is a real-time chat application built using Spring Boot and WebSock
    http://localhost:8080/chat
    ```
 
----
+
 
 ## API Endpoints
 | Method | Endpoint          | Description                 |
@@ -58,7 +58,7 @@ This project is a real-time chat application built using Spring Boot and WebSock
 | GET    | /chat            | Serves the chat UI          |
 | POST   | /app/sendMessage | Sends a message via WebSockets |
 
----
+
 
 ## Project Structure
 ```
@@ -76,19 +76,19 @@ chat_app/
 │   ├── application.properties
 ```
 
----
+
 
 ## Usage
 1. Enter your name in the sender input field.
 2. Type a message and click the "Send" button.
 3. The message is broadcasted in real-time to all connected users.
 
----
+
 
 ## Contributing
 Feel free to fork the repository and submit pull requests.
 
----
+
 
 ## Author
 **Anjali Singhai**
